@@ -32,7 +32,7 @@
 		48321E731C4950A70061A8FB /* helloworld-ios-app-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "helloworld-ios-app-Prefix.pch"; path = "helloworld-ios-app/helloworld-ios-app-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		8A752CB58B24942AC2578F50 /* Pods-helloworld-ios-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworld-ios-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-helloworld-ios-app/Pods-helloworld-ios-app.release.xcconfig"; sourceTree = "<group>"; };
 		E8C626CA5F9BD7057C84B57E /* Pods-helloworld-ios-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-helloworld-ios-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-helloworld-ios-app/Pods-helloworld-ios-app.debug.xcconfig"; sourceTree = "<group>"; };
-		F2E35E90190A8BB800F08BC6 /* helloworld-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "helloworld-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E35E90190A8BB800F08BC6 /* helloworld-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "helloworld-ios-app.app"; path = henry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E35EAC190A8BB800F08BC6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F2E35ECE190A960F00F08BC6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		F2E35EDA190A9B3400F08BC6 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -157,7 +157,7 @@
 				ORGANIZATIONNAME = FeedHenry;
 				TargetAttributes = {
 					F2E35E8F190A8BB800F08BC6 = {
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -359,8 +359,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "$(inherited)";
 				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.feedhenry.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "helloworld-ios-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.goldark.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "hello-henry";
 				SHARED_PRECOMPS_DIR = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -383,8 +383,8 @@
 				INFOPLIST_FILE = "helloworld-ios-app/helloworld-ios-app-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.feedhenry.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "helloworld-ios-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.goldark.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "hello-henry";
 				SHARED_PRECOMPS_DIR = "";
 				WRAPPER_EXTENSION = app;
 			};
