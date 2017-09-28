@@ -70,26 +70,12 @@ node('ios') {
 
     stage('Prepare') {
         writeFile file: "${PROJECT_NAME}/fhconfig.plist", text: FH_CONFIG_CONTENT
-        sh '/usr/local/bin/pod install'
+        sh 'fastlane prepare'
     }
 
     stage('Build') {
         withEnv(["XC_VERSION=${XC_VERSION}"]) {
-            xcodeBuild(
-                    cleanBeforeBuild: CLEAN,
-                    src: './',
-                    schema: "${PROJECT_NAME}",
-                    workspace: "${PROJECT_NAME}",
-                    buildDir: "build",
-                    sdk: "${SDK}",
-                    version: "${VERSION}",
-                    shortVersion: "${SHORT_VERSION}",
-                    bundleId: "${BUNDLE_ID}",
-                    infoPlistPath: "${INFO_PLIST}",
-                    xcodeBuildArgs: 'ENABLE_BITCODE=NO OTHER_CFLAGS="-fstack-protector -fstack-protector-all"',
-                    autoSign: false,
-                    config: "${BUILD_CONFIG}"
-            )
+            sh "fastlane build scheme:${PROJECT_NAME} workspace:${PROJECT_NAME}.xcworkspace config:${BUILD_CONFIG}"
         }
     }
 
